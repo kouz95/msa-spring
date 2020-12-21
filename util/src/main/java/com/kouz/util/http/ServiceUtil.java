@@ -28,7 +28,7 @@ public class ServiceUtil {
         try {
             return InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException e) {
-            log.info(e.getMessage());
+            log.warn(e.getMessage());
             return "unknown host name";
         }
     }
@@ -37,7 +37,7 @@ public class ServiceUtil {
         try {
             return InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
-            log.info(e.getMessage());
+            log.warn(e.getMessage());
             return "unknown IP address";
         }
     }
