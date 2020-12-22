@@ -10,4 +10,11 @@ public class Product {
     private final String name;
     private final int weight;
     private final String serviceAddress;
+
+    private Product() {
+        productId = 0;
+        name = null;
+        weight = 0;
+        serviceAddress = null;
+    }
 }

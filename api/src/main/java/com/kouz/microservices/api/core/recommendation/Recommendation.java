@@ -12,4 +12,13 @@ public class Recommendation {
     private final int rate;
     private final String content;
     private final String serviceAddress;
+
+    private Recommendation() {
+        productId = 0;
+        recommendationId = 0;
+        author = null;
+        rate = 0;
+        content = null;
+        serviceAddress = null;
+    }
 }
