@@ -1,24 +1,19 @@
 package com.kouz.microservices.api.core.recommendation;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@RequiredArgsConstructor
+@Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Recommendation {
-    private final int productId;
-    private final int recommendationId;
-    private final String author;
-    private final int rate;
-    private final String content;
-    private final String serviceAddress;
-
-    private Recommendation() {
-        productId = 0;
-        recommendationId = 0;
-        author = null;
-        rate = 0;
-        content = null;
-        serviceAddress = null;
-    }
+    private int productId;
+    private int recommendationId;
+    private String author;
+    private int rate;
+    private String content;
+    private String serviceAddress;
 }

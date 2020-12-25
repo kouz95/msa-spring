@@ -1,5 +1,14 @@
 server:
   port: 7002
+  error:
+    include-message: always
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: product-db
 
 logging:
   level:
@@ -12,5 +21,10 @@ spring:
   config:
     activate:
       on-profile: docker
+
+  data:
+    mongodb:
+      host: mongodb
+
 server:
   port: 8080

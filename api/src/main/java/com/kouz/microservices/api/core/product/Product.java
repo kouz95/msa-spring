@@ -1,20 +1,17 @@
 package com.kouz.microservices.api.core.product;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@RequiredArgsConstructor
+@Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
-    private final int productId;
-    private final String name;
-    private final int weight;
-    private final String serviceAddress;
-
-    private Product() {
-        productId = 0;
-        name = null;
-        weight = 0;
-        serviceAddress = null;
-    }
+    private int productId;
+    private String name;
+    private int weight;
+    private String serviceAddress;
 }
