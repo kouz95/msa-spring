@@ -1,5 +1,6 @@
 package com.kouz.microservices.core.product.services;
 
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kouz.microservices.api.core.product.Product;
@@ -9,7 +10,6 @@ import com.kouz.microservices.core.product.persistence.ProductRepository;
 import com.kouz.util.exceptions.InvalidInputException;
 import com.kouz.util.exceptions.NotFoundException;
 import com.kouz.util.http.ServiceUtil;
-import com.mongodb.DuplicateKeyException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

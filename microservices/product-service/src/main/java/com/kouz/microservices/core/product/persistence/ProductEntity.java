@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,8 +12,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-@Document(collation = "products")
+@Document(collection = "products")
 public class ProductEntity {
     @Id
     private String id;
@@ -27,4 +25,10 @@ public class ProductEntity {
 
     private String name;
     private int weight;
+
+    public ProductEntity(int productId, String name, int weight) {
+        this.productId = productId;
+        this.name = name;
+        this.weight = weight;
+    }
 }
